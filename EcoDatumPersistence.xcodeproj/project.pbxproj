@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEA0CCF1222CC4F8008F8112 /* EcoDatumCommon.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE5222B32930072FF2B /* EcoDatumCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEA0CCF2222CC4F8008F8112 /* EcoDatumCoreData.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE7222B32930072FF2B /* EcoDatumCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEA0CCF3222CC4F8008F8112 /* EcoDatumModel.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE6222B32930072FF2B /* EcoDatumModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BEA0CCF4222CC51E008F8112 /* EcoDatumCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE5222B32930072FF2B /* EcoDatumCommon.framework */; };
+		BEA0CCF5222CC51E008F8112 /* EcoDatumCoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE7222B32930072FF2B /* EcoDatumCoreData.framework */; };
+		BEA0CCF6222CC51E008F8112 /* EcoDatumModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE6222B32930072FF2B /* EcoDatumModel.framework */; };
 		BEE91FD4222B31ED0072FF2B /* EcoDatumPersistence.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FCA222B31ED0072FF2B /* EcoDatumPersistence.framework */; };
 		BEE91FD9222B31ED0072FF2B /* PersistenceManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE91FD8222B31ED0072FF2B /* PersistenceManagerTests.swift */; };
 		BEE91FDB222B31ED0072FF2B /* EcoDatumPersistence.h in Headers */ = {isa = PBXBuildFile; fileRef = BEE91FCD222B31ED0072FF2B /* EcoDatumPersistence.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -25,6 +31,22 @@
 			remoteInfo = EcoDatumPersistence;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BEA0CCF0222CC4DE008F8112 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BEA0CCF1222CC4F8008F8112 /* EcoDatumCommon.framework in Copy Frameworks */,
+				BEA0CCF2222CC4F8008F8112 /* EcoDatumCoreData.framework in Copy Frameworks */,
+				BEA0CCF3222CC4F8008F8112 /* EcoDatumModel.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BEE91FCA222B31ED0072FF2B /* EcoDatumPersistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcoDatumPersistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +77,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE91FD4222B31ED0072FF2B /* EcoDatumPersistence.framework in Frameworks */,
+				BEA0CCF4222CC51E008F8112 /* EcoDatumCommon.framework in Frameworks */,
+				BEA0CCF5222CC51E008F8112 /* EcoDatumCoreData.framework in Frameworks */,
+				BEA0CCF6222CC51E008F8112 /* EcoDatumModel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +173,7 @@
 				BEE91FCF222B31ED0072FF2B /* Sources */,
 				BEE91FD0222B31ED0072FF2B /* Frameworks */,
 				BEE91FD1222B31ED0072FF2B /* Resources */,
+				BEA0CCF0222CC4DE008F8112 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -430,6 +456,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9424XMB56D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EcoDatumPersistenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +479,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9424XMB56D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = EcoDatumPersistenceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

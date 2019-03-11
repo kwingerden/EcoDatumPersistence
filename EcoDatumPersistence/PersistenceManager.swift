@@ -15,29 +15,30 @@ public class PeristenceManager {
     
     enum PeristenceError: Error {
         case SiteNotFound
-        case InvalidSiteLocation
     }
     
     public static let shared = PeristenceManager()
     
-    private lazy var cdm: CoreDataManager = {
-        return CoreDataManager.shared
-    }()
+    private let cdm = CoreDataManager.shared
     
     private init() {
         
     }
     
-    public func new(site: Site) throws {
-        
-        try cdm.newSite(name: site.name)
-        
+    public func newSite(_ name: String) throws -> Site {
+        let siteEntity = try cdm.newSite(name)
+        try cdm.save()
+        return Site(id: siteEntity.id!,
+                    name: siteEntity.name!,
+                    createdDate: siteEntity.createdDate!,
+                    updatedDate: siteEntity.updatedDate!)
     }
     
     public func update(site: Site) throws {
         
     }
     
+    /*
     public func add(new ecoDatum: EcoDatum, to site: Site) throws {
         guard let site = try cdm.getSite(byId: site.id) else {
             throws PeristenceError.SiteNotFound
@@ -45,5 +46,6 @@ public class PeristenceManager {
         try cdm.newEcoDatum(site: )
         try cdm.save()
     }
+ */
     
 }

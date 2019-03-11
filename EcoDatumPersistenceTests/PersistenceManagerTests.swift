@@ -7,6 +7,9 @@
 //
 
 import XCTest
+import EcoDatumCommon
+import EcoDatumModel
+import EcoDatumCoreData
 @testable import EcoDatumPersistence
 
 class PersistenceManagerTests: XCTestCase {
@@ -20,7 +23,7 @@ class PersistenceManagerTests: XCTestCase {
     }
 
     func test1() throws {
-        
+        let site1 = Site(
     }
 
 }
