@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE4BF6B52240024600AAE0DA /* NotebookPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BF6B42240024600AAE0DA /* NotebookPersistence.swift */; };
 		BEA0CCF1222CC4F8008F8112 /* EcoDatumCommon.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE5222B32930072FF2B /* EcoDatumCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEA0CCF2222CC4F8008F8112 /* EcoDatumCoreData.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE7222B32930072FF2B /* EcoDatumCoreData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEA0CCF3222CC4F8008F8112 /* EcoDatumModel.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = BEE91FE6222B32930072FF2B /* EcoDatumModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -49,6 +50,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BE4BF6B42240024600AAE0DA /* NotebookPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotebookPersistence.swift; sourceTree = "<group>"; };
 		BEE91FCA222B31ED0072FF2B /* EcoDatumPersistence.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EcoDatumPersistence.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE91FCD222B31ED0072FF2B /* EcoDatumPersistence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EcoDatumPersistence.h; sourceTree = "<group>"; };
 		BEE91FCE222B31ED0072FF2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				BEE91FCD222B31ED0072FF2B /* EcoDatumPersistence.h */,
 				BEE91FCE222B31ED0072FF2B /* Info.plist */,
 				BEE91FEB222B34450072FF2B /* PersistenceManager.swift */,
+				BE4BF6B42240024600AAE0DA /* NotebookPersistence.swift */,
 			);
 			path = EcoDatumPersistence;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4BF6B52240024600AAE0DA /* NotebookPersistence.swift in Sources */,
 				BEE91FEC222B34450072FF2B /* PersistenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

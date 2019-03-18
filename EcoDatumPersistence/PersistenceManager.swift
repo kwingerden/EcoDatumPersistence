@@ -11,40 +11,38 @@ import EcoDatumCommon
 import EcoDatumModel
 import EcoDatumCoreData
 
-public class PeristenceManager {
+public class PersistenceManager {
+    
+    public static let DEFAULT_NOTEBOOK_NAME = NotebookEntity.DEFAULT_NAME
     
     enum PeristenceError: Error {
         case SiteNotFound
+        
+        case InvalidNotebook
     }
     
-    public static let shared = PeristenceManager()
-    
-    private let cdm = CoreDataManager.shared
+    public static let shared = PersistenceManager()
     
     private init() {
         
     }
     
-    public func newSite(_ name: String) throws -> Site {
-        let siteEntity = try cdm.newSite(name)
-        try cdm.save()
-        return Site(id: siteEntity.id!,
-                    name: siteEntity.name!,
-                    createdDate: siteEntity.createdDate!,
-                    updatedDate: siteEntity.updatedDate!)
+    public func newNotebook(_ name: String = PersistenceManager.DEFAULT_NOTEBOOK_NAME) throws -> Notebook {
+        let notebook = try NotebookEntity.new(name: name)
+        try CoreDataManager.shared.save()
+        return Notebook(id: notebook.id,
+                        name: name,
+                        createdDate: notebook.createdDate,
+                        updatedDate: notebook.updatedDate,
+                        sites: nil)
     }
-    
-    public func update(site: Site) throws {
-        
-    }
-    
+   
     /*
-    public func add(new ecoDatum: EcoDatum, to site: Site) throws {
-        guard let site = try cdm.getSite(byId: site.id) else {
-            throws PeristenceError.SiteNotFound
+    public func findNotebook(_ name: String) throws -> Notebook? {
+        guard let notebookEntity = try NotebookEntity.find(by: name) else {
+            return nil
         }
-        try cdm.newEcoDatum(site: )
-        try cdm.save()
+        return try notebookEntity.toModel()
     }
  */
     

@@ -23,7 +23,8 @@ class PersistenceManagerTests: XCTestCase {
     }
 
     func test1() throws {
-        let site1 = Site(
+        let notebook = try PersistenceManager.shared.newNotebook()
+        print(try toJSON(notebook))
     }
 
 }
